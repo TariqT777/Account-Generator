@@ -1,8 +1,11 @@
-fetch("https://www.passwordrandom.com/api")
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+// fetch("https://www.passwordrandom.com/query?command=password&format=json&count=10#")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data));
 
   
 function randomAccount(){
-  alert('button was clicked!!!');
+  fetch("https://www.passwordrandom.com/query?command=password&format=json&count=10#")
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+    alert('button was clicked!!!');
 }
