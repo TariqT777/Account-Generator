@@ -12,6 +12,6 @@ function randomAccount(){
 
 function renderPassword(data) {
   const Password = document.getElementById("Password");
-  Password.innerHTML = data.Password;
+  Password.innerHTML = data.char;
   
 }
