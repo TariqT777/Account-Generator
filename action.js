@@ -9,8 +9,20 @@ function randomAccount(){
     .then((data) => renderPassword(data));
     //alert('button was clicked!!!');
 }
+
+function randomUsername(){
+  fetch("https://randomuser.me/api/")
+  .then((response) => response.json())
+  .then((userData) => console.log(userData));
+  
+}
+
 function passwordCategory() {
   document.getElementById('printPassword').style.display = "inline";
+}
+function renderUsername(userData){
+  const userName = document.getElementById("Username");
+  userName.innerHTML = userData;
 }
 
 function renderPassword(data) {

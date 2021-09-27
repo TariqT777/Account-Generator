@@ -12,8 +12,12 @@
    <center><h3>By Tariq Thomas</h3></center>
    
 
-   <center><button class = "button" onclick ="randomAccount(); passwordCategory()" id = "Account-Button" type="submit" >Randomize Account</button></center>
+   <center><button class = "button" onclick ="randomAccount(); randomUsername(); passwordCategory()" id = "Account-Button" type="submit" >Randomize Account</button></center>
    
+   <div style="clear:both">
+    <center><h2 id="printUsername"  style="display:none;float: left;" class="answer_list" > userName: </h2></center>
+    <center><h2 id = "Username" style="float: right;"></h2></center>
+</div>
    <div style="clear: both">
     <center><h2 id="printPassword"  style="display:none;float: left;" class="answer_list" > Password: </h2></center>
     <center><h2 id = "Password" style="float: right;"></h2></center>
