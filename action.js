@@ -9,6 +9,9 @@ function randomAccount(){
     .then((data) => renderPassword(data));
     //alert('button was clicked!!!');
 }
+function passwordCategory() {
+  document.getElementById('printPassword').style.display = "inline";
+}
 
 function renderPassword(data) {
   const Password = document.getElementById("Password");
