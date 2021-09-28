@@ -11,9 +11,10 @@ function randomAccount(){
 }
 
 async function randomUsername(){
-  const name = fetch("https://randomuser.me/api/");
-  const account = name.json();
-  console.log(account);
+  const name = await fetch("https://randomuser.me/api/");
+  const account = await name.json();
+  const userName = await account.results[0].login.username
+  console.log(userName);
   //.then((response) => response.json())
   //.then((data) => userData = data)
   //.then(() => console.log(userData));
