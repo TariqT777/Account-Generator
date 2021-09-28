@@ -10,12 +10,16 @@ function randomAccount(){
     //alert('button was clicked!!!');
 }
 
-function randomUsername(){
-  fetch("https://randomuser.me/api/")
-  .then((response) => response.json())
-  .then((userData) => console.log(userData));
-  
+async function randomUsername(){
+  const name = fetch("https://randomuser.me/api/");
+  const account = name.json();
+  console.log(account);
+  //.then((response) => response.json())
+  //.then((data) => userData = data)
+  //.then(() => console.log(userData));
+ 
 }
+
 
 function userNameCategory() {
   document.getElementById('printUsername').style.display = "inline";
@@ -25,8 +29,8 @@ function passwordCategory() {
 }
 
 function renderUsername(userData){
-  const userName = document.getElementById("Username");
-  userName.innerHTML = userData;
+  const userNamePrinted = document.getElementById("usernamePrinted");
+  userNamePrinted.innerHTML = userData;
 }
 
 function renderPassword(data) {
