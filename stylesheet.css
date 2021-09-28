@@ -9,3 +9,8 @@ button{
     padding: 15px 32px;
     font-size: 16px;
 }
+
+button#Account-Button:hover {
+    background-color: #000000;
+    color: #C55FFC
+  }
