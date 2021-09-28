@@ -14,11 +14,7 @@ async function randomUsername(){
   const name = await fetch("https://randomuser.me/api/");
   const account = await name.json();
   const userName = await account.results[0].login.username
-  console.log(userName);
-  //.then((response) => response.json())
-  //.then((data) => userData = data)
-  //.then(() => console.log(userData));
- 
+  renderUsername(userName);
 }
 
 
@@ -30,7 +26,7 @@ function passwordCategory() {
 }
 
 function renderUsername(userData){
-  const userNamePrinted = document.getElementById("usernamePrinted");
+  const userNamePrinted = document.getElementById("userNamePrinted");
   userNamePrinted.innerHTML = userData;
 }
 
