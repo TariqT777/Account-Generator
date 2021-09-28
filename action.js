@@ -17,9 +17,13 @@ function randomUsername(){
   
 }
 
+function userNameCategory() {
+  document.getElementById('printUsername').style.display = "inline";
+}
 function passwordCategory() {
   document.getElementById('printPassword').style.display = "inline";
 }
+
 function renderUsername(userData){
   const userName = document.getElementById("Username");
   userName.innerHTML = userData;
